@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source FIles</Filter>
+    </ClCompile>
+    <ClCompile Include="nav.cpp">
+      <Filter>Source FIles</Filter>
+    </ClCompile>
+    <ClCompile Include="node.cpp">
+      <Filter>Source FIles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaInterface.cpp">
+      <Filter>LUA Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaModuleManager.cpp">
+      <Filter>LUA Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaObject.cpp">
+      <Filter>LUA Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="kdtree.c">
+      <Filter>Source FIles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nav.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaInterface.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaModuleManager.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaObject.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaTable.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\Interface.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\LuaBase.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\Types.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\UserData.h">
+      <Filter>LUA Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="kdtree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source FIles">
+      <UniqueIdentifier>{e3d525d2-8af3-4ba4-b9fe-da2c10a39b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6e8bc1f0-8afd-43aa-8209-4c9753724791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LUA Headers">
+      <UniqueIdentifier>{4489b3bc-d65b-4556-a1b6-0bdcc845d962}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gm_navigation", "gm_navigation\gm_navigation.vcxproj", "{8033DC79-C770-4DE4-83BA-4FD670182CCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release - Client|Win32 = Release - Client|Win32
+		Release - Server|Win32 = Release - Server|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8033DC79-C770-4DE4-83BA-4FD670182CCF}.Release - Client|Win32.ActiveCfg = Release - Client|Win32
+		{8033DC79-C770-4DE4-83BA-4FD670182CCF}.Release - Client|Win32.Build.0 = Release - Client|Win32
+		{8033DC79-C770-4DE4-83BA-4FD670182CCF}.Release - Server|Win32.ActiveCfg = Release - Server|Win32
+		{8033DC79-C770-4DE4-83BA-4FD670182CCF}.Release - Server|Win32.Build.0 = Release - Server|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

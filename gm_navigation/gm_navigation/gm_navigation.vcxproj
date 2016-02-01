@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release - Server|Win32">
+      <Configuration>Release - Server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release - Client|Win32">
+      <Configuration>Release - Client</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8033DC79-C770-4DE4-83BA-4FD670182CCF}</ProjectGuid>
+    <RootNamespace>gm_nav</RootNamespace>
+    <ProjectName>gm_navigation</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">
+    <TargetName>gmcl_navigation_win32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">
+    <TargetName>gmsv_navigation_win32</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Client|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>K:\Programming\hl2sdk-ob-valve;K:\Programming\hl2sdk-ob-valve/common;K:\Programming\hl2sdk-ob-valve/common/xbox;K:\Programming\hl2sdk-ob-valve/public;K:\Programming\hl2sdk-ob-valve/public/tier0;K:\Programming\hl2sdk-ob-valve/public/tier1;K:\Programming\hl2sdk-ob-valve/src/public/tier2;K:\Programming\hl2sdk-ob-valve/public/tier3;K:\Programming\hl2sdk-ob-valve/game/client;K:\Programming\hl2sdk-ob-valve/game/shared;K:\Programming\hl2sdk-ob-valve/game/server;K:\Programming\hl2sdk-ob-valve/src/utils/common;K:\Programming\hl2sdk-ob-valve/src/dlls;K:\Programming\hl2sdk-ob-valve/src/dlls/hl2_dll;K:\Programming\hl2sdk-ob-valve/src/episodic;K:\Programming\hl2sdk-ob-valve\public\vstdlib;K:\Programming\Garrysmod\blackawps modules\backwards_headers;K:\Programming\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;GAME_DLL;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;GMMODULE;USE_BOOST_THREADS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>mathlib.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;vstdlib.lib;raytrace.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>K:\Programming\hl2sdk-ob-valve\lib\public;K:\Programming\boost\bin.v2\libs\thread\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\date_time\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\system\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\chrono\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\space326\garrysmod\garrysmod\lua\bin\gmcl_navigation_win32.dll"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>K:\Programming\hl2sdk-ob-valve;K:\Programming\hl2sdk-ob-valve/common;K:\Programming\hl2sdk-ob-valve/common/xbox;K:\Programming\hl2sdk-ob-valve/public;K:\Programming\hl2sdk-ob-valve/public/tier0;K:\Programming\hl2sdk-ob-valve/public/tier1;K:\Programming\hl2sdk-ob-valve/src/public/tier2;K:\Programming\hl2sdk-ob-valve/public/tier3;K:\Programming\hl2sdk-ob-valve/game/client;K:\Programming\hl2sdk-ob-valve/game/shared;K:\Programming\hl2sdk-ob-valve/game/server;K:\Programming\hl2sdk-ob-valve/src/utils/common;K:\Programming\hl2sdk-ob-valve/src/dlls;K:\Programming\hl2sdk-ob-valve/src/dlls/hl2_dll;K:\Programming\hl2sdk-ob-valve/src/episodic;K:\Programming\hl2sdk-ob-valve\public\vstdlib;K:\Programming\Garrysmod\blackawps modules\backwards_headers;K:\Programming\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;LUA_SERVER;GAME_DLL;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;GMMODULE;USE_BOOST_THREADS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>mathlib.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;vstdlib.lib;raytrace.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>K:\Programming\hl2sdk-ob-valve\lib\public;K:\Programming\boost\bin.v2\libs\thread\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\date_time\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\system\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\chrono\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\space326\garrysmod\garrysmod\lua\bin\gmsv_navigation_win32.dll"
+copy "$(TargetPath)" "E:\Servers\GMOD\orangebox\garrysmod\lua\bin"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaInterface.cpp" />
+    <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaModuleManager.cpp" />
+    <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaObject.cpp" />
+    <ClCompile Include="kdtree.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="nav.cpp" />
+    <ClCompile Include="node.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaInterface.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaModuleManager.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaObject.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\ILuaTable.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\Interface.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\LuaBase.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\Types.h" />
+    <ClInclude Include="..\..\..\blackawps modules\backwards_headers\UserData.h" />
+    <ClInclude Include="kdtree.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="nav.h" />
+    <ClInclude Include="node.h" />
+    <ClInclude Include="defines.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
