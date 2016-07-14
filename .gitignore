@@ -17,3 +17,5 @@
 *.htm
 *.lastbuildstate
 *.unsuccessfulbuild
+*.tlog
+gm_navigation/gm_navigation.VC.db

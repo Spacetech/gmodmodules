@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Release - Server|Win32">
       <Configuration>Release - Server</Configuration>
@@ -20,13 +20,13 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -62,7 +62,7 @@
       <Optimization>Disabled</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>K:\Programming\hl2sdk-ob-valve;K:\Programming\hl2sdk-ob-valve/common;K:\Programming\hl2sdk-ob-valve/common/xbox;K:\Programming\hl2sdk-ob-valve/public;K:\Programming\hl2sdk-ob-valve/public/tier0;K:\Programming\hl2sdk-ob-valve/public/tier1;K:\Programming\hl2sdk-ob-valve/src/public/tier2;K:\Programming\hl2sdk-ob-valve/public/tier3;K:\Programming\hl2sdk-ob-valve/game/client;K:\Programming\hl2sdk-ob-valve/game/shared;K:\Programming\hl2sdk-ob-valve/game/server;K:\Programming\hl2sdk-ob-valve/src/utils/common;K:\Programming\hl2sdk-ob-valve/src/dlls;K:\Programming\hl2sdk-ob-valve/src/dlls/hl2_dll;K:\Programming\hl2sdk-ob-valve/src/episodic;K:\Programming\hl2sdk-ob-valve\public\vstdlib;K:\Programming\Garrysmod\blackawps modules\backwards_headers;K:\Programming\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\OneDrive\Programming\source-sdk-2013;D:\OneDrive\Programming\source-sdk-2013\mp\src\common;D:\OneDrive\Programming\source-sdk-2013\mp\src\common/xbox;D:\OneDrive\Programming\source-sdk-2013\mp\src\public;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier0;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier1;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier2;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier3;D:\OneDrive\Programming\source-sdk-2013\mp\src\game\client;D:\OneDrive\Programming\source-sdk-2013\mp\src\game\shared;D:\OneDrive\Programming\source-sdk-2013\mp\src\game\server;D:\OneDrive\Programming\source-sdk-2013\mp\src\utils\common;D:\OneDrive\Programming\source-sdk-2013\mp\src\dlls;D:\OneDrive\Programming\source-sdk-2013\mp\src\dlls\hl2_dll;D:\OneDrive\Programming\source-sdk-2013\mp\src\src\episodic;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\vstdlib;D:\OneDrive\Programming\Garrysmod\blackawps modules\backwards_headers;D:\Programming\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;GAME_DLL;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;GMMODULE;USE_BOOST_THREADS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -77,8 +77,8 @@
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <Link>
-      <AdditionalDependencies>mathlib.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;vstdlib.lib;raytrace.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>K:\Programming\hl2sdk-ob-valve\lib\public;K:\Programming\boost\bin.v2\libs\thread\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\date_time\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\system\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\chrono\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mathlib.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;vstdlib.lib;raytrace.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\OneDrive\Programming\source-sdk-2013\mp\src\lib\public;D:\Programming\boost\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -87,16 +87,16 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateMapFile>true</GenerateMapFile>
     </Link>
-    <PostBuildEvent>
+    <!--<PostBuildEvent>
       <Command>copy "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\space326\garrysmod\garrysmod\lua\bin\gmcl_navigation_win32.dll"</Command>
-    </PostBuildEvent>
+    </PostBuildEvent>-->
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Server|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>K:\Programming\hl2sdk-ob-valve;K:\Programming\hl2sdk-ob-valve/common;K:\Programming\hl2sdk-ob-valve/common/xbox;K:\Programming\hl2sdk-ob-valve/public;K:\Programming\hl2sdk-ob-valve/public/tier0;K:\Programming\hl2sdk-ob-valve/public/tier1;K:\Programming\hl2sdk-ob-valve/src/public/tier2;K:\Programming\hl2sdk-ob-valve/public/tier3;K:\Programming\hl2sdk-ob-valve/game/client;K:\Programming\hl2sdk-ob-valve/game/shared;K:\Programming\hl2sdk-ob-valve/game/server;K:\Programming\hl2sdk-ob-valve/src/utils/common;K:\Programming\hl2sdk-ob-valve/src/dlls;K:\Programming\hl2sdk-ob-valve/src/dlls/hl2_dll;K:\Programming\hl2sdk-ob-valve/src/episodic;K:\Programming\hl2sdk-ob-valve\public\vstdlib;K:\Programming\Garrysmod\blackawps modules\backwards_headers;K:\Programming\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\OneDrive\Programming\source-sdk-2013;D:\OneDrive\Programming\source-sdk-2013\mp\src\common;D:\OneDrive\Programming\source-sdk-2013\mp\src\common/xbox;D:\OneDrive\Programming\source-sdk-2013\mp\src\public;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier0;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier1;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier2;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\tier3;D:\OneDrive\Programming\source-sdk-2013\mp\src\game\client;D:\OneDrive\Programming\source-sdk-2013\mp\src\game\shared;D:\OneDrive\Programming\source-sdk-2013\mp\src\game\server;D:\OneDrive\Programming\source-sdk-2013\mp\src\utils\common;D:\OneDrive\Programming\source-sdk-2013\mp\src\dlls;D:\OneDrive\Programming\source-sdk-2013\mp\src\dlls\hl2_dll;D:\OneDrive\Programming\source-sdk-2013\mp\src\src\episodic;D:\OneDrive\Programming\source-sdk-2013\mp\src\public\vstdlib;D:\OneDrive\Programming\Garrysmod\blackawps modules\backwards_headers;D:\Programming\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;LUA_SERVER;GAME_DLL;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;GMMODULE;USE_BOOST_THREADS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -111,8 +111,8 @@
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <Link>
-      <AdditionalDependencies>mathlib.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;vstdlib.lib;raytrace.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>K:\Programming\hl2sdk-ob-valve\lib\public;K:\Programming\boost\bin.v2\libs\thread\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\date_time\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\system\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;K:\Programming\boost\bin.v2\libs\chrono\build\msvc-11.0\release\link-static\runtime-link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mathlib.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;vstdlib.lib;raytrace.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\OneDrive\Programming\source-sdk-2013\mp\src\lib\public;D:\Programming\boost\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -121,10 +121,10 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateMapFile>true</GenerateMapFile>
     </Link>
-    <PostBuildEvent>
+    <!--<PostBuildEvent>
       <Command>copy "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\space326\garrysmod\garrysmod\lua\bin\gmsv_navigation_win32.dll"
 copy "$(TargetPath)" "E:\Servers\GMOD\orangebox\garrysmod\lua\bin"</Command>
-    </PostBuildEvent>
+    </PostBuildEvent>-->
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\blackawps modules\backwards_headers\ILuaInterface.cpp" />

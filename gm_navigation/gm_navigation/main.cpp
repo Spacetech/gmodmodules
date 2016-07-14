@@ -137,7 +137,6 @@ LUA_FUNCTION(nav_Poll)
 
 #ifdef FILEBUG
 				FILEBUG_WRITE("Calling Callback 1\n");
-#endif
 
 				for(int i=0; i <= Lua()->Top(); i++)
 				{
@@ -147,6 +146,7 @@ LUA_FUNCTION(nav_Poll)
 						FILEBUG_WRITE("\t%f\n", Lua()->GetNumber(i));
 					}
 				}
+#endif
 
 				Lua()->Call(3);
 
